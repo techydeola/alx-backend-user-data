@@ -18,6 +18,16 @@ class Auth:
         """A public method
             Returns: False
         """
+        if path is None:
+            return True
+        if excluded_paths is None:
+            return True
+        if (f"{path}" + "/") in excluded_paths:
+            return False
+        if path not in excluded_paths:
+            return True
+        if path in excluded_paths:
+            return False
 
         return False
 
