@@ -4,6 +4,7 @@
 
 from .auth import Auth
 import uuid
+import os
 
 
 class SessionAuth(Auth):
